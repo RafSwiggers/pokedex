@@ -11,6 +11,6 @@ body {
     width: 25%
 }
 
-p {
+span {
     text-transform: capitalize;
 }
