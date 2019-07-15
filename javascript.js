@@ -20,9 +20,9 @@ function pokedex() {
         let api = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         let response = await axios.get(api);
         console.log(response.data)
-        field[0].insertAdjacentText("beforeend", response.data.name)
-        field[1].insertAdjacentText("beforeend", response.data.height)
-        field[2].insertAdjacentText("beforeend", response.data.weight)
+        field[0].innerHTML = response.data.name;
+        field[1].innerHTML = response.data.height;
+        field[2].innerHTML = response.data.weight;
         sprite.src = response.data.sprites.front_default;
         imgDiv.style.display = "block";
 
