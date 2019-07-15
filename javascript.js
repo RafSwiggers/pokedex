@@ -15,7 +15,8 @@ function loadpokemon() {
 
 function pokedex() {
     button.addEventListener("click", async function(e) {
-        let pokemon = search.value;
+        let result = search.value;
+        let pokemon = result.toLowerCase();
         let api = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         let response = await axios.get(api);
         console.log(response.data)
