@@ -28,7 +28,7 @@ function pokedex() {
         console.log(evoresponse.data);
         field[0].innerHTML = response.data.id;
         field[1].innerHTML = response.data.name;
-        field[2].innerHTML = response.data.height;
+        field[2].innerHTML = response.data.height * 10;
         field[3].innerHTML = response.data.weight;
         statName[0].innerHTML = response.data.stats[5].stat.name + ": ";
         statField[0].innerHTML = response.data.stats[5].base_stat;
