@@ -61,7 +61,7 @@ function pokedex() {
             evolve[2].style.display = "none";
         }
 
-        imgDiv.style.display = "block";
+        imDiv.style.display = "block";
 
 
     })
