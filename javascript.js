@@ -21,10 +21,11 @@ function pokedex() {
         let pokemon = result.toLowerCase();
         let api = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         let response = await axios.get(api);
-        console.log(response.data);
-        field[0].innerHTML = response.data.name;
-        field[1].innerHTML = response.data.height;
-        field[2].innerHTML = response.data.weight;
+        console.log(response.data.id);
+        field[0].innerHTML = response.data.id;
+        field[1].innerHTML = response.data.name;
+        field[2].innerHTML = response.data.height;
+        field[3].innerHTML = response.data.weight;
         statName[0].innerHTML = response.data.stats[5].stat.name + ": ";
         statField[0].innerHTML = response.data.stats[5].base_stat;
         statName[1].innerHTML = response.data.stats[3].stat.name + ": ";
