@@ -1,20 +1,51 @@
-body {
-    background: #6699ff;
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+html {
+    background: url(img/pockemonbackground.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#button {
+    height: 256px;
+    width: 256px;
+    border-radius: 50%;
+    background-image: url("/img/icon2.png");
+    outline: none;
+}
+
+#button:active {
+    background-color: #d6d8c8;
+    transform: translateY(10px);
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #search {
-    margin: auto auto;
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    margin-right: 20px;
+    border: 10px solid red;
 }
 
 #imDiv {
-    background: whitesmoke;
-    width: 25%
-}
-
-span {
-    text-transform: capitalize;
-}
-
-.evolve {
-    display: none;
+    background: url(img/gameboy3.jpg)no-repeat center;
+    background-size: cover;
+    width: 324px;
+    height: 576px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    border: 10px solid white;
+    margin: auto;
 }
