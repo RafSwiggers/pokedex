@@ -14,3 +14,7 @@ body {
 span {
     text-transform: capitalize;
 }
+
+.evolve {
+    display: none;
+}
