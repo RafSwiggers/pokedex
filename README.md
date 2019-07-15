@@ -1,2 +1,2 @@
-# pokedex
-A working, searchable pokedex
+# Pokédex
+
