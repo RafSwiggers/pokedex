@@ -2,6 +2,15 @@ body {
     background: red;
 }
 
+#search {
+    margin: auto auto;
+}
+
 #imDiv {
     background: whitesmoke;
+    width: 15%
+}
+
+p {
+    text-transform: capitalize;
 }
