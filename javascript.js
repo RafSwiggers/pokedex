@@ -26,24 +26,19 @@ function pokedex() {
         let pokeid = response.data.id;
         let evoapi = `https://pokeapi.co/api/v2/pokemon-species/${pokeid}`;
         let evoresponse = await axios.get(evoapi);
-        console.log(evoresponse.data);
-        field[0].innerHTML = response.data.id;
-        field[1].innerHTML = response.data.name;
-        field[2].innerHTML = response.data.height * 10;
-        field[3].innerHTML = response.data.weight;
+        console.log(response.data.types[0].type);
+        var dataArray = ["id", "name", "height", "weight"]
+        for (let i = 0; i < dataArray.length; i++) {
+            field[i].innerHTML = response.data[dataArray[i]];
+            moves[i].innerHTML = response.data.moves[i].move.name;
+        }
         statName[0].innerHTML = response.data.stats[5].stat.name + ": ";
         statField[0].innerHTML = response.data.stats[5].base_stat;
         statName[1].innerHTML = response.data.stats[3].stat.name + ": ";
         statField[1].innerHTML = response.data.stats[3].base_stat;
         statName[2].innerHTML = response.data.stats[0].stat.name + ": ";
         statField[2].innerHTML = response.data.stats[0].base_stat;
-        moves[0].innerHTML = response.data.moves[0].move.name;
-        moves[1].innerHTML = response.data.moves[1].move.name;
-        moves[2].innerHTML = response.data.moves[2].move.name;
-        moves[3].innerHTML = response.data.moves[3].move.name;
         sprite.src = response.data.sprites.front_default;
-
-
 
         if (evoresponse.data.evolves_from_species) {
             evolve[0].style.display = "block";
