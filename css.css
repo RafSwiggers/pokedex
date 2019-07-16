@@ -11,7 +11,7 @@ html {
     height: 256px;
     width: 256px;
     border-radius: 50%;
-    background-image: url("/img/icon2.png");
+    background-image: url(img/icon2.png);
     outline: none;
 }
 
